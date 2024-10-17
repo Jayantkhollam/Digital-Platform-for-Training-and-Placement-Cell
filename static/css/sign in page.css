@@ -1,0 +1,174 @@
+/* Sticky Navbar */
+.navigation {
+  background-color: #0c0c0c;
+  width: 100%;
+  top: 0;
+  position: sticky;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.brand a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-list li {
+  margin-right: 20px;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Cards */
+.card {
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 400px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(10, 10, 10, 0.5);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0 200px rgba(22, 155, 216, 0.959);
+}
+
+/* Media Query for Desktop Screens */
+@media (min-width: 768px) {
+  .card {
+    margin-top: 100px;
+  }
+}
+
+.card-header {
+  background-color: #ffffff;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.card-header i {
+  margin-right: 5px;
+}
+
+.card-body {
+  padding: 20px;
+  overflow: hidden; /* Adjusted overflow property */
+}
+
+/* Input field */
+.input_field {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input_field input,
+.input_field select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: #555;
+  background: transparent;
+  appearance: none;
+}
+
+/* Department Select */
+.select-field {
+  position: relative;
+  width: 100%;
+}
+
+/* Adjust dropdown menu */
+.select-field select {
+  width: calc(100% - 30px);
+  position: relative;
+  z-index: 1;
+}
+
+/* Select arrow */
+.select_arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+  }
+
+  .card {
+    width: 90%;
+    overflow: visible;
+  }
+}
+
+/* Sign-in Button */
+.button {
+  background-color: #053ef8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #319b43;
+}
+
+/* Sticky Footer */
+#sticky-footer {
+  background-color: #0f0f0f;
+  color: white;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* Set background color for the body */
+body {
+  background-color: #030303;
+}
+
+.statust p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.statuss p {
+  text-align: center;
+  margin-top: 1rem;
+}

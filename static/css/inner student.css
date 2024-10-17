@@ -1,0 +1,419 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+}
+
+.navbar {
+  background: #0c0c0c;
+  color: #fff;
+  padding: 10px 20px;
+  border-bottom: 5px solid #0e970e;
+}
+
+/* Logo styles */
+.logo {
+  margin: 0; /* Remove margin */
+  font-size: 24px; /* Adjust font size */
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none; /* Remove default list styles */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  display: flex; /* Use flexbox for alignment */
+}
+
+nav ul li {
+  margin-right: 10px; /* Add margin between list items */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Remove margin from the last list item */
+}
+
+/* Button styles */
+.navbar button {
+  background-color: transparent; /* Transparent background */
+  color: #ffffff; /* Text color */
+  border: none; /* Remove border */
+  cursor: pointer; /* Add pointer cursor */
+  font-size: 16px; /* Adjust font size */
+  padding: 5px 10px; /* Padding for buttons */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.navbar button:hover {
+  background-color: rgba(
+    37,
+    223,
+    13,
+    0.418
+  ); /* Semi-transparent white background on hover */
+}
+
+/* Card styles */
+.card {
+  border: 1px solid #ccc;
+  background-color: rgba(8, 8, 8, 0.349);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 70%; /* Set the width to 90% of the viewport */
+
+  margin: 50px auto; /* Center the card horizontally and provide margin */
+}
+
+.card-header {
+  background-color: #ffffffd5;
+  color: #141414;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-around; /* Space out the button containers horizontally */
+  align-items: center; /* Align items vertically */
+  padding: 20px; /* Adjust padding */
+}
+
+.button-container {
+  flex: 1; /* Each button container takes up equal space */
+  text-align: center; /* Center the button */
+}
+
+.button-container p {
+  color: #fff; /* Set text color to white */
+}
+
+.separator {
+  width: 1px; /* Width of the separator */
+  height: 50px; /* Height of the separator */
+  background-color: #eeff05; /* Color of the separator */
+}
+
+.subscribe-section,
+.unsubscribe-section {
+  margin-top: 20px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* Style for subscribe button */
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+/* Style for unsubscribe button */
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+}
+
+/* Apply animation on button click */
+.btn-primary:hover,
+.btn-danger:hover {
+  animation: buttonClickAnimation 0.3s;
+}
+
+/* Alert styles */
+.alert {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Semi-transparent white background */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+.alert-success {
+  background-color: #07ff07;
+  color: #111111;
+}
+
+.alert-danger {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+    padding: 10px; /* Adjust padding */
+    height: auto; /* Allow the height to adjust dynamically */
+  }
+
+  .nav-links {
+    margin-top: 10px; /* Add margin between logo and navigation links */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack links vertically */
+    align-items: flex-start; /* Align links to the start */
+  }
+
+  nav ul li {
+    margin-right: 0; /* Remove margin between list items */
+    margin-bottom: 5px; /* Add margin between list items */
+  }
+
+  .card {
+    width: 90%; /* Adjust the width for smaller screens */
+  }
+
+  .card-body {
+    flex-direction: column; /* Split button containers vertically on smaller screens */
+  }
+}
+
+/* Jumbotron styles */
+.jumbotron1 {
+  color: #ff7300;
+  padding: 2rem 1rem;
+  margin: 0; /* Remove any margin */
+  border-radius: 0.3rem;
+  max-width: 100%;
+  height: calc(
+    100vh - 60px
+  ); /* Adjusted height to fill remaining viewport space after navbar */
+
+  background-image: conic-gradient(from 45deg, #272626, #121213);
+}
+
+.jumbotron h1,
+.jumbotron p {
+  margin-bottom: 0;
+}
+
+.jumbotron p {
+  font-size: 1.25rem;
+}
+
+.footer {
+  height: 5rem;
+  margin-top: 0%;
+}
+
+/* Jumbotron styles */
+.jumbotron2 {
+  color: #e4e4e4;
+  padding: 2rem 1rem;
+  margin: 0; /* Remove any margin */
+  border-radius: 0.3rem;
+  max-width: 100%;
+  height: calc(100vh - 60px); /* Adjusted height to fill remaining viewport space after navbar */
+  background: linear-gradient(to bottom, #141414, #7e7d7d);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s, transform 0.3s; /* Add transition */
+}
+
+.jumbotron2:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: translateY(-5px); /* Slightly lift on hover */
+}
+
+.jumbotron2header {
+  color: #ff7300;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Custom CSS for accordion */
+.jumbotron2 .accordion {
+  width: 80%; /* Adjust accordion width */
+  margin: auto; /* Center the accordion */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+  background-color: #0b85f7;
+}
+
+.jumbotron2 .accordion-item {
+  width: 100%; /* Make accordion items full width */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Add border radius */
+  margin-bottom: 1rem; /* Space between items */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow to items */
+  transition: box-shadow 0.3s; /* Add transition */
+}
+
+.jumbotron2 .accordion-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.jumbotron2 .accordion-button {
+  width: 100%; /* Make accordion button full width */
+  text-align: left; /* Align text to the left */
+  font-weight: bold; /* Set font weight to bold for accordion headers */
+  border: none; /* Remove default border */
+  padding: 1rem 1.5rem; /* Add padding */
+  background-color: #f8f9fa;
+  border-radius: 8px; /* Add border radius */
+  transition: background-color 0.3s; /* Add transition */
+}
+
+.jumbotron2 .accordion-button:hover {
+  background-color: #e0e0e0; /* Change background color on hover */
+}
+
+.jumbotron2 .accordion-body {
+  padding: 20px; /* Increase padding for accordion body */
+  background-color: #f8f9fa; /* Match background color */
+  border-radius: 0 0 8px 8px; /* Add border radius to bottom corners */
+}
+
+.jumbotron2 .accordion-body p {
+  margin-bottom: 10px; /* Add space between paragraphs */
+}
+
+.jumbotron2 .accordion-body .btn {
+  margin-top: 50px; /* Add space between paragraph and button */
+  background-color: #239445;
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.jumbotron2 .accordion-body .btn:hover {
+  background-color: #1e7e3a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Increase height of accordion upon dropdown */
+.jumbotron2 .accordion-collapse {
+  max-height: 500px; /* Adjust max-height as needed */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
+  transition: max-height 0.3s; /* Add transition */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .jumbotron2 .accordion {
+    width: 90%; /* Adjust accordion width for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .jumbotron2 .accordion {
+    width: 100%; /* Adjust accordion width for extra small screens */
+  }
+}
+
+
+
+
+/* Jumbotron 3 Styles */
+.jumbotron3 {
+  background-color: #f8f9fa;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - 20px); /* Adjusted height to fill remaining viewport space after navbar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 1rem;
+  transition: box-shadow 0.3s, transform 0.3s;
+  overflow: hidden; /* Prevents double scrollbar */
+}
+
+.jumbotron3 button {
+  background-color: #6200ea;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.jumbotron3 button:hover {
+  background-color: #3700b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  width: 80%; /* Set the width to 80% of the container */
+  max-width: 600px;
+  margin: 2rem auto; /* Center the card horizontally */
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  color: #1c1d1c;
+  transition: box-shadow 0.3s; /* Add transition for smooth effect */
+}
+
+.card:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Apply glow effect on hover */
+}
+
+.card-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-check {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.form-check-input {
+  margin-right: 1rem; /* Adjust the margin between the input and label */
+  align-items: center;
+}
+
+.form-check-label {
+  font-size: 1.2rem;
+  color: #1b1b1b;
+  text-align: center;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  border-radius: 1.5rem;
+  padding: 0.8rem 2.5rem;
+  margin: 0.5rem;
+}

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ncer Students</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/static/css/inner student.css">
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- fork Awesome -->
+    <script src="https://kit.fontawesome.com/d8acde37bb.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+
+
+    <div class="container navbar">
+        <h1 class="logo text-white">Welcome Student</h1>
+        <nav>
+            <ul>
+                <li>
+                    <button type="button" class="btn btn-primary navhome" onclick="showHome()">Home</button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-primary navfeat" onclick="scrollToJumbotron()">Skills
+                        Test</button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-primary navreg" onclick="showHome()">Logout</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <br>
+
+
+
+
+    <!--  Jumbotron 1 -->
+
+    <div class="jumbotron1 text-center">
+        <h1 class="display-4">Welcome to Ncer Student Desk</h1>
+        <p class="lead">This is a platform for students to access various resources.</p>
+
+        <p>You can explore different features and stay updated.</p>
+
+
+
+
+
+        <div class="card">
+            <div class="card-header text-center fw-bold">
+                Placement News
+            </div>
+            <div class="card-body">
+                <div class="button-container">
+                    <p>Get Official Placement news Updates From College</p>
+                    <button id="subscribe-btn" class="btn btn-primary">Subscribe</button>
+                </div>
+                <div class="separator"></div>
+                <div class="button-container">
+                    <p>Are you sure you want to unsubscribe?</p>
+                    <button id="unsubscribe-btn" class="btn btn-danger">Unsubscribe</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="subscribe-success-alert" class="alert alert-success" style="display: none;">
+            Subscribed successfully!
+        </div>
+
+        <div id="unsubscribe-success-alert" class="alert alert-danger" style="display: none;">
+            Unsubscribed successfully!
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <!-- Jumbotron 2 -->
+    <div id="jumbotron2" class="jumbotron2 text-center">
+        <h1 class="jumbotron2header">Skill Development: Learning Resources & Tools</h1>
+        <br>
+        <br>
+
+        <!-- Interview Tips Accordion -->
+        <div class="accordion" id="accordionInterview">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingInterview">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseInterview" aria-expanded="true" aria-controls="collapseInterview">
+                        Unlock Your Success: Interview Tips
+                    </button>
+                </h2>
+                <div id="collapseInterview" class="accordion-collapse collapse show" aria-labelledby="headingInterview"
+                    data-bs-parent="#accordionInterview">
+                    <div class="accordion-body">
+                        Prepare yourself for success with our expert tips on acing interviews. Learn essential
+                        strategies and techniques to impress your potential employers and land your dream job.
+                        <br>
+                        <a href="/static/download/interview download button/500 most asked apti ques in tcs, wipro, infos(105pgs).zip"
+                            class="btn btn-lg btn-primary">Download Interview Tips</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resources Accordion -->
+        <div class="accordion mt-4" id="accordionResources">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingResources">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseResources" aria-expanded="false" aria-controls="collapseResources">
+                        Empower Your Learning: Resources
+                    </button>
+                </h2>
+                <div id="collapseResources" class="accordion-collapse collapse" aria-labelledby="headingResources"
+                    data-bs-parent="#accordionResources">
+                    <div class="accordion-body">
+                        Access a wealth of resources to enhance your knowledge and skills. From study materials to
+                        online courses, explore a variety of resources tailored to support your academic and
+                        professional growth.
+                        <br>
+                        <a href="/static/download/Download all resources button/All  resources.zip"
+                            class="btn btn-lg btn-primary" data-toggle="tooltip" data-placement="top"
+                            title="Click to download all resources">Download All Resources</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!------------------ jumbotron 3  apti test ---------------------->
+
+    <!-- Start Exam Page -->
+    <div id="start-page" class="jumbotron3 text-center">
+        <h1 class="display-4">AptiGenius</h1>
+        <p class="lead">Welcome to the AptiGenius Aptitude Test.</p>
+        <button id="start-btn" class="btn btn-primary mt-3">Start Exam</button>
+    </div>
+
+    <!-- Quiz Page -->
+    <div id="quiz-page" class="jumbotron3 text-center" style="display:none;">
+        <h1 class="display-4">AptiGenius</h1>
+        <p class="lead">Answer the questions to the best of your ability.</p>
+
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="question-number" class="card-title"></h5>
+                    <p id="question-text" class="card-text"></p>
+                    <form id="quiz-form">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="option" id="option1" value="a">
+                            <label class="form-check-label" for="option1" id="option1-label"></label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="option" id="option2" value="b">
+                            <label class="form-check-label" for="option2" id="option2-label"></label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="option" id="option3" value="c">
+                            <label class="form-check-label" for="option3" id="option3-label"></label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="option" id="option4" value="d">
+                            <label class="form-check-label" for="option4" id="option4-label"></label>
+                        </div>
+                    </form>
+                    <button id="prev-btn" class="btn btn-primary mt-3">Back</button>
+                    <button id="next-btn" class="btn btn-primary mt-3">Next</button>
+                    <button id="skip-btn" class="btn btn-secondary mt-3">Skip</button>
+                    <button id="exit-btn" class="btn btn-danger mt-3">Exit Test</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scorecard Modal -->
+    <div class="modal fade" id="scorecardModal" tabindex="-1" aria-labelledby="scorecardModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="scorecardModalLabel">Quiz Scorecard</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="scorecardBody">
+                    <!-- Scorecard content will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+
+    <script>
+        const questions = [
+            { question: "What comes next in the sequence: 2, 6, 12, 20, 30, ...?", options: ["36", "42", "50", "56"], answer: "b" },
+            { question: "A train running at 60 km/hr crosses a pole in 9 seconds. What is the length of the train?", options: ["150 meters", "180 meters", "200 meters", "225 meters"], answer: "a" },
+            { question: "What is the output of the following code?\n\nint main() { printf(\"%d\", 5+7); return 0; }", options: ["5", "7", "12", "Compilation Error"], answer: "c" },
+            { question: "What is the next number in the series: 1, 1, 2, 3, 5, 8, ...?", options: ["11", "13", "15", "21"], answer: "b" },
+            { question: "If x + y = 10 and x - y = 4, what is the value of x?", options: ["2", "3", "6", "7"], answer: "c" },
+            { question: "What is the time complexity of binary search algorithm?", options: ["O(n)", "O(log n)", "O(n^2)", "O(n log n)"], answer: "b" },
+            { question: "Which sorting algorithm is best suited for sorting a nearly sorted list?", options: ["Bubble Sort", "Insertion Sort", "Selection Sort", "Merge Sort"], answer: "b" },
+            { question: "Find the missing number: 3, 9, 27, ?, 243", options: ["81", "54", "72", "90"], answer: "a" },
+            { question: "If the perimeter of a rectangle is 60 cm and its length is 20 cm, what is its width?", options: ["5 cm", "10 cm", "15 cm", "20 cm"], answer: "b" },
+            { question: "What is the value of x in the equation 2x - 3 = 7?", options: ["2", "3", "5", "6"], answer: "c" },
+            // Add more questions as needed...
+        ];
+
+        let currentQuestionIndex = 0;
+        const userAnswers = Array(questions.length).fill(null);
+
+        function loadQuestion(index) {
+            const question = questions[index];
+            document.getElementById("question-number").textContent = `Question ${index + 1}`;
+            document.getElementById("question-text").textContent = question.question;
+            document.getElementById("option1-label").textContent = question.options[0];
+            document.getElementById("option2-label").textContent = question.options[1];
+            document.getElementById("option3-label").textContent = question.options[2];
+            document.getElementById("option4-label").textContent = question.options[3];
+            document.querySelectorAll('input[name="option"]').forEach(input => input.checked = false);
+        }
+
+        function saveAnswer() {
+            const selectedOption = document.querySelector('input[name="option"]:checked');
+            if (selectedOption) {
+                userAnswers[currentQuestionIndex] = selectedOption.value;
+            }
+        }
+
+        document.getElementById("next-btn").addEventListener("click", () => {
+            saveAnswer();
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                loadQuestion(currentQuestionIndex);
+            } else {
+                alert("You have reached the end of the quiz.");
+            }
+        });
+
+        document.getElementById("prev-btn").addEventListener("click", () => {
+            saveAnswer();
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion(currentQuestionIndex);
+            }
+        });
+
+        document.getElementById("skip-btn").addEventListener("click", () => {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                loadQuestion(currentQuestionIndex);
+            } else {
+                alert("You have reached the end of the quiz.");
+            }
+        });
+
+        document.getElementById("exit-btn").addEventListener("click", () => {
+            const confirmExit = confirm("Are you sure you want to exit the test?");
+            if (confirmExit) {
+                calculateScore();
+            }
+        });
+
+        document.getElementById("start-btn").addEventListener("click", () => {
+            document.getElementById("start-page").style.display = "none";
+            document.getElementById("quiz-page").style.display = "block";
+            loadQuestion(currentQuestionIndex);
+        });
+
+        function calculateScore() {
+            let score = 0;
+            for (let i = 0; i < questions.length; i++) {
+                if (userAnswers[i] === questions[i].answer) {
+                    score++;
+                }
+            }
+            const totalQuestions = questions.length;
+            const percentage = (score / totalQuestions) * 100;
+            const scorecardBody = document.getElementById("scorecardBody");
+            scorecardBody.innerHTML = `
+            <p>Total Questions: ${totalQuestions}</p>
+            <p>Correct Answers: ${score}</p>
+            <p>Percentage: ${percentage.toFixed(2)}%</p>
+        `;
+            $('#scorecardModal').modal('show');
+            $('#scorecardModal').on('hidden.bs.modal', resetQuiz);
+        }
+
+        function resetQuiz() {
+            currentQuestionIndex = 0;
+            userAnswers.fill(null);
+            document.getElementById("quiz-page").style.display = "none";
+            document.getElementById("start-page").style.display = "block";
+        }
+
+        // Initialize the quiz
+        loadQuestion(currentQuestionIndex);
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer --->
+
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <small>Copyright &copy; Team NCER </small>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+<script>
+    function scrollToJumbotron() {
+        document.getElementById('jumbotron2').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function showHome() {
+        window.location.href = "/index.html";
+    }
+
+    function Logout() {
+        window.location.href = "/sign_in.html";
+    }
+</script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- JavaScript for animations and toast notifications -->
+<script src="/static/javascript/script.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- jQuery Slim -->
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+
+<script>
+    function showSkillsTest() {
+        window.location.href = "#skills-test-section";
+    }
+
+    function showHome() {
+        window.location.href = "/index.html";
+    }
+
+    function Logout() {
+        window.location.href = "/sign_in.html";
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+/* Google Font Import - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  /* ===== Colors ===== */
+  --body-color: #e4e9f7;
+  --sidebar-color: #fefeff;
+  --primary-color: #006b17;
+  --primary-color-light: #f6f5ff;
+  --toggle-color: #ddd;
+  --text-color: #707070;
+
+  /* ====== Transition ====== */
+  --tran-03: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.3s ease;
+  --tran-05: all 0.3s ease;
+}
+
+.page-holder {
+  min-height: 100vh;
+}
+
+.bg-cover {
+  background-size: cover !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+/* ===== top navbar ===== */
+
+.nav-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background: transparent;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.418), rgba(18, 19, 19, 0.8));
+}
+
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo {
+  padding: 10px 0;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #dff709;
+}
+
+nav a::before {
+  content: "";
+  display: inline-block;
+  height: 5px;
+  background-color: #f1e5e5;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+/* Custom styles for the home page */
+
+.headerindex {
+  text-align: center;
+  color: #d2ff08;
+  padding: 50px 20px;
+  background-color: #1414144f;
+  min-height: calc(100vh - 150px);
+}
+
+.headerindex h1 {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+}
+
+/* Mission Statement */
+.mission-statement {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-content {
+  font-size: 14px;
+  text-align: center;
+  max-width: 600px;
+}
+
+.footer-content p {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #ddd;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}

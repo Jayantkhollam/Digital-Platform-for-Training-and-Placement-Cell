@@ -1,0 +1,343 @@
+/* Navbar Styles */
+
+.navbar {
+  overflow: hidden; /* Prevent content from overflowing the container */
+  background-color: #212529; /* Dark background color */
+  padding: 1rem 1.5rem; /* Add some padding for better spacing */
+}
+
+.navbar-brand {
+  color: #fff; /* White text for brand name */
+  font-weight: bold; /* Make brand name stand out */
+}
+
+.navbar-toggler {
+  border-color: #fff; /* White border for toggle button */
+}
+
+.navbar-toggler:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light grey hover background */
+}
+
+.navbar-toggler-icon {
+  color: #fff; /* White color for toggle icon */
+}
+
+.navbar-nav {
+  margin-left: auto; /* Move navigation links to the right */
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.7); /* Light grey text for navigation links */
+  margin-right: 1rem; /* Add some spacing between links */
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #fff; /* White text for active and hover states */
+  font-weight: bold; /* Make active and hover states stand out */
+}
+
+.btn-light {
+  color: #212529; /* Dark text for light button */
+  background-color: #fff; /* White background for light button */
+  border-color: #fff; /* White border for light button */
+}
+
+.btn-light:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Slightly lighter grey hover background */
+}
+
+/* Media Queries for Different Screen Sizes */
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem; /* Adjust brand name size for smaller screens */
+  }
+  .navbar-nav {
+    flex-direction: column; /* Stack navigation links vertically on small screens */
+    align-items: center; /* Center navigation links horizontally */
+    margin-top: 1rem; /* Add some top margin for better separation */
+  }
+  .nav-link {
+    margin-bottom: 1rem; /* Add some bottom margin between links on small screens */
+  }
+}
+
+/* Modal Styles */
+
+.modal-dialog {
+  max-width: 500px; /* Limit modal width on larger screens */
+  margin: 1.75rem auto; /* Center the modal horizontally and vertically */
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 90%; /* Adjust modal width for very small screens */
+  }
+}
+
+.modal-content {
+  background-color: #fff; /* White background for modal content */
+  border-radius: 0.5rem; /* Add some rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.modal-header {
+  border-bottom: 1px solid #ddd; /* Light border for header */
+}
+
+.modal-title {
+  color: #212529; /* Dark text for modal title */
+  font-weight: bold; /* Make modal title stand out */
+}
+
+.modal-body {
+  padding: 1.5rem; /* Add some padding for content */
+}
+
+.form-label {
+  color: #212529; /* Dark text for form labels */
+}
+
+.btn-primary {
+  background-color: #212529; /* Dark blue background for primary button */
+  border-color: #212529; /* Dark blue border for primary button */
+  color: #fff; /* White text for primary button */
+}
+
+.btn-primary:hover {
+  background-color: #1e1f21; /* Slightly darker blue hover background */
+}
+
+
+
+
+
+
+/* Custom CSS for testimonials */
+.alumni-testimonials {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+  max-width: 100%;
+  /* Adjusted height to fill remaining viewport space after navbar */
+  height: calc(100vh - 110px);
+  /* Added a gradient background */
+  background: linear-gradient(to bottom, #eeeeee, #a8dce9);
+  /* Centered content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.alumni-testimonials .container {
+  width: 100%;
+}
+
+.alumni-testimonials h2 {
+  font-size: 2.5rem;
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+.carousel-inner {
+  margin-top: 20px; /* Adjust spacing between title and sliders */
+}
+
+.testimonial-slide {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin: 0 10px;
+}
+
+.testimonial-slide:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-slide p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.testimonial-slide footer {
+  color: #6c757d;
+  margin-top: 10px;
+}
+
+/* Custom Carousel Buttons */
+.carousel-control-prev, .carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: none;
+  margin-top: -25px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.carousel-control-prev-icon {
+  margin-left: -1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Section 2 styles */
+.section2container {
+  text-align: center; /* Center the section content horizontally */
+  height: 700px;
+  background-color: rgb(8, 8, 8);
+  border-radius: 8px;
+}
+.section2container h1 {
+  color: #ddd;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Default styles for the card */
+.card {
+  border: 1px solid #dee2e6; /* Border color */
+  border-radius: 10px; /* Border radius */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
+  width: 80%; /* Set initial width */
+  margin: 0 auto; /* Center the card horizontally */
+  overflow-y: auto; /* Enable vertical scrolling */
+  width: 70%; /* Adjust width for medium screens */
+  height: 60%;
+  background-color: #ddd;
+}
+
+ /* Add any specific styles for the container to render the Excel sheet */
+
+/* Style the checkboxes */
+#excel-table input[type="checkbox"] {
+  transform: scale(1.5);
+  margin: 5px 10px;
+}
+
+/* Optional: Add hover effects for the table rows */
+#excel-table table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Ensure the table is responsive and styled */
+#excel-table {
+  margin-bottom: 50px;
+}
+
+#excel-table table {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+}
+
+#excel-table table th,
+#excel-table table td {
+  padding: 10px;
+}
+
+/* Connect button styles */
+.connectbtn {
+  position: relative; /* Change position to relative */
+  margin-top: 30px; /* Adjust margin as needed */
+  width: fit-content; /* Make button width fit its content */
+  margin-left: auto; /* Align button to the right */
+  margin-right: auto; /* Align button to the right */
+  display: block; /* Ensure button is displayed as a block element */
+  background-color: #070707; /* Green background color */
+  color: #e6e5e5; /* White text color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Center align text */
+  box-shadow: 0 2px 4px rgba(5, 245, 25, 0.959); /* Box shadow */
+}
+
+/* Adjust modal title alignment */
+.modal {
+  text-align: left;
+}
+
+/* Alert Container */
+.alert {
+  position: fixed;
+  top: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000; /* Ensure alerts are on top of other content */
+  width: 300px; /* Adjust width as needed */
+  border-radius: 5px;
+}
+
+/* Alert Text */
+.alert.alert-success,
+.alert.alert-danger {
+  padding: 10px;
+}
+
+/* Close Button */
+.alert button.close {
+  padding: 10px;
+}
+
+/* Success Alert Background Color */
+.alert.alert-success {
+  background-color: #d4edda; /* Adjust color as needed */
+  color: #155724; /* Adjust color as needed */
+}
+
+/* Error Alert Background Color */
+.alert.alert-danger {
+  background-color: #f8d7da; /* Adjust color as needed */
+  color: #721c24; /* Adjust color as needed */
+}
+
+/* Hover Effect for Close Button */
+.alert button.close:hover {
+  color: inherit; /* Preserve button color */
+  text-decoration: none; /* Remove default underline */
+  opacity: 0.75; /* Adjust opacity as needed */
+}
+
+
+
+
+
+

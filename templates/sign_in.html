@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title> NCER Sign in </title>
+
+
+  <!--  Bootstrap CSS  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Style CSS -->
+
+  <link rel="stylesheet" href="/static/css/sign in page.css">
+  <!-- <link rel="stylesheet" href="/static/css/toast.css"> -->
+
+
+  <!----======== Javascript ======== -->
+
+
+  <script src="//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script>
+  <link rel="stylesheet" href="/static/javascript/script.js">
+
+  <!----======== Jquery slim ======== -->
+
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
+    integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+
+  <!----===== Boxicons CSS ===== -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+
+  <!-- fork Awesome -->
+  <script src="https://kit.fontawesome.com/d8acde37bb.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+
+  <!----------  top navbar                 ----------------- -->
+
+
+  <section class="navigation fixed-top navbar-expand-lg">
+    <div class="nav-container">
+      <div class="brand">
+        <a href="#!">Sign In</a>
+      </div>
+      <nav>
+        <div class="nav-mobile">
+          <a id="nav-toggle" href="#!"><span></span></a>
+        </div>
+        <ul class="nav-list">
+          <!-- Setting the links to #! will ensure that no action takes place on click. -->
+          <li><a href="/index.html">Home</a></li>
+
+
+
+
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  <!-- Navbar Section Exit -->
+
+
+
+
+
+
+  <!---------------------- faculty sign in ----------------->
+
+
+
+  <div class="container sign md-6">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header text-center ">
+            <br><i aria-hidden="true" class="fa fa-user"></i></span>
+            Faculty Sign In
+          </div>
+
+
+          <div class="card-body">
+            <form id="faculty-signin-form" action="/sign_in" method="POST">
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                <input type="email" name="fac_email" placeholder="Email" required />
+              </div>
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                <input type="password" name="fac_password" placeholder="Password" required />
+              </div>
+
+              <div class="row clearfix">
+
+
+                <div class="col_half">
+
+                </div>
+              </div>
+
+              <div class="input_field select_option">
+                <select name="fac_department">
+                  <option>Select a Department</option>
+                  <option>COMPUTER SCIENCE ENGINEERING</option>
+                  <option>ELECTRONICS & TELECOMMUNICATION ENGINEERING</option>
+                  <option>MECHANICAL ENGINEERING</option>
+                  <option>ARTIFICIAL INTELLIGENCE</option>
+                  <option>CIVIL ENGINEERING</option>
+                </select>
+                <div class="select_arrow"></div>
+                <div class="statust">
+                  <p>{{status_teacher}}</p>
+                </div>
+              </div>
+
+
+
+
+
+
+              <input class="button" type="submit" value="Sign In" />
+              <input class="button" type="submit" value="Forgot Password?" />
+
+
+
+          </div>
+          </form>
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+      <!-- student sign in -->
+
+
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header text-center ">
+            <br><i aria-hidden="true" class="fa fa-user"></i></span>
+            Student Sign In
+          </div>
+
+
+          <div class="card-body">
+            <form id="student-signin-form" action="/sign_in" method="POST">
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                <input type="email" name="stu_email" placeholder="Email" required />
+              </div>
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                <input type="password" name="stu_password" placeholder="Password" required />
+              </div>
+
+              <div class="row clearfix">
+
+
+                <div class="col_half">
+
+                </div>
+              </div>
+
+              <div class="input_field select_option">
+                <select name="stu_department">
+                  <option>Select a Department</option>
+                  <option>COMPUTER SCIENCE ENGINEERING</option>
+                  <option>ELECTRONICS & TELECOMMUNICATION ENGINEERING</option>
+                  <option>MECHANICAL ENGINEERING</option>
+                  <option>ARTIFICIAL INTELLIGENCE</option>
+                  <option>CIVIL ENGINEERING</option>
+                </select>
+                <div class="select_arrow"></div>
+                <div class="statuss">
+                  <p>{{status_student}}</p>
+                </div>
+              </div>
+
+
+              <input class="button" type="submit" value="Sign In" />
+              <input class="button" type="submit" value="Forgot Password?" />
+
+
+          </div>
+          </form>
+        </div>
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+  </div>
+
+
+  <!-- footer --->
+
+
+
+  <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; Team NCER</small>
+    </div>
+  </footer>
+
+</body>
+
+
+
+</body>

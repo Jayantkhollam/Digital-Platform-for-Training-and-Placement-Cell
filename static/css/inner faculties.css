@@ -1,0 +1,205 @@
+/* Reset and Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Background Image Covering the Screen */
+.page-holder {
+  background-image: url("/static/images/pexels-eberhard-grossgasteiger-844297.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 50px 0;
+  position: relative;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: rgba(10, 10, 10, 0.75);
+  color: #fff;
+  padding: 10px 20px;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+}
+
+/* Logo Styles */
+.logo {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Navigation Styles */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+/* Button Styles */
+.navbar button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.navbar button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Keyframe Animation for Welcome Message */
+@keyframes welcomeAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Apply Animation to Welcome Message */
+.container h1 {
+  animation: welcomeAnimation 2s infinite;
+}
+
+/* Big Card Styles */
+.bigcard {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 1000px;
+  height: auto;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title::before {
+  content: '\2022';
+  color: #f50707;
+  font-size: large;
+  margin-right: 0.5em;
+}
+
+/* Button Hover Styles */
+.btn:hover {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+/* Card Hover Effects */
+.card:hover {
+  box-shadow: 0 0 30px rgba(208, 255, 0, 0.9);
+}
+
+/* Unique Card Colors on Hover */
+.card:nth-child(2):hover {
+  background-color: #FFEB3B;
+}
+
+.card:nth-child(3):hover {
+  background-color: #2196F3;
+}
+
+.card:nth-child(4):hover {
+  background-color: #F44336;
+}
+
+.card:nth-child(5):hover {
+  background-color: #9C27B0;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Footer Text Styles */
+footer p {
+  margin: 0;
+}
+
+/* Style for modal */
+.modal-content {
+  border: none;
+  border-radius: 15px;
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  border-radius: 15px 15px 0 0;
+}
+
+.modal-title {
+  color: #343a40;
+}
+
+/* Style for card */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+#excel-table {
+  width: 100%;
+}
+
+/* Excel Table Formatting */
+#excel-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#excel-table table td, 
+#excel-table table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#excel-table table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+#excel-table table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

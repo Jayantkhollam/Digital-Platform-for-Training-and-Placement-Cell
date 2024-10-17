@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> NCER Registration </title>
+
+
+    <!--  Bootstrap CSS  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style CSS -->
+
+    <link rel="stylesheet" href="/static/css/registration  pages.css">
+
+
+
+    <!----======== Javascript ======== -->
+
+
+    <script>src = "//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" </script>
+    <link rel="stylesheet" href="/static/javascript/script.js">
+
+    <!----======== Jquery slim ======== -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
+        integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+
+    <!-- fork Awesome -->
+    <script src="https://kit.fontawesome.com/d8acde37bb.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+
+
+
+
+
+    <!----------  top navbar                 ----------------- -->
+
+
+
+
+    <!-- Navbar Section Start -->
+
+    <section class="navigation fixed-top navbar-expand-lg">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="#!">Registration</a>
+            </div>
+            <nav>
+                <div class="nav-mobile">
+                    <a id="nav-toggle" href=""><span></span></a>
+                </div>
+                <ul class="">
+                    <!-- Setting the links to #! will ensure that no action takes place on click. -->
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/sign_in.html">Sign in</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Navbar Section Exit -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!----------  Faculty registration container                 ----------------- -->
+
+    <div class="container register">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <p class="text-center fw-bold text-white">{{status_teacher}} {{status_student}}</p>
+
+
+                <div class="card ">
+                    <div class="card-header text-center">
+                        <span><br><i aria-hidden="true" class="fa fa-user"></i></span>
+                        Faculty Registration
+                    </div>
+                    <div class="card-body">
+                        <form action="/register" method="POST">
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                                <input type="email" name="fac_email" placeholder="Email" required />
+                            </div>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                                <input type="password" name="fac_password" placeholder="Password" required />
+                            </div>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                                <input type="password" name="fac_re_password" placeholder="Confirm Password" required />
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col_half">
+                                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                        <input type="text" name="fac_f_name" placeholder="First Name" />
+                                    </div>
+                                </div>
+                                <div class="col_half">
+                                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                        <input type="text" name="fac_l_name" placeholder="Last Name" required />
+                                    </div>
+                                </div>
+                                <div class="col_half">
+                                    <div class="input_field"> <span><i aria-hidden="true"
+                                                class="fa fa-mobile"></i></span>
+                                        <input type="text" name="fac_mobile" placeholder="mobile Number" required />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="input_field select_option mb-3">
+                                <select name="fac_department">
+                                    <option>Select a Department</option>
+                                    <option>COMPUTER SCIENCE ENGINEERING</option>
+                                    <option>ELECTRONICS & TELECOMMUNICATION ENGINEERING</option>
+                                    <option>MECHANICAL ENGINEERING</option>
+                                    <option>ARTIFICIAL INTELLIGENCE</option>
+                                    <option>CIVIL ENGINEERING</option>
+                                </select>
+                                <div class="select_arrow"></div>
+                            </div>
+
+                            <input class="button" type="submit" value="Register" />
+                        </form>
+
+
+
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <hr>
+                <br>
+
+
+
+                <!----------  student registration container                 ----------------- -->
+
+
+                <div class="card">
+                    <div class="card-header text-center ">
+                        <br><i aria-hidden="true" class="fa fa-user"></i></span>
+                        Student Registration
+                    </div>
+                    <div class="card-body">
+                        <form action="/register" method="POST">
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                                <input type="email" name="stu_email" placeholder="Email" required />
+                            </div>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                                <input type="password" name="stu_password" placeholder="Password" required />
+                            </div>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                                <input type="password" name="stu_re_password" placeholder="Confirm Password" required />
+                            </div>
+
+                            <div class="row clearfix">
+                                <div class="col_half">
+                                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                        <input type="text" name="stu_f_name" placeholder="First Name" />
+                                    </div>
+                                </div>
+                                <div class="col_half">
+                                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                        <input type="text" name="stu_l_name" placeholder="Last Name" required />
+                                    </div>
+                                </div>
+                                <div class="col_half">
+                                    <div class="input_field"> <span><i aria-hidden="true"
+                                                class="fa fa-mobile"></i></span>
+                                        <input type="text" name="stu_mobile" placeholder="mobile Number" required />
+                                    </div>
+                                </div>
+
+
+
+                                <!-- CGPA and Year Selection -->
+                                <div class="input_field">
+                                    <label for="cgpa_year" style="font-size: 16px;">Select Year and Enter
+                                        CGPA:</label><br>
+
+                                    <input type="radio" id="first_year" name="year" value="First Year">
+                                    <label for="first_year">First Year:</label>
+                                    <input type="text" id="first_year_cgpa" name="first_year_cgpa"
+                                        placeholder="FY CGPA"><br>
+
+                                    <input type="radio" id="second_year" name="year" value="Second Year">
+                                    <label for="second_year">Second Year:</label>
+                                    <input type="text" id="second_year_cgpa" name="second_year_cgpa"
+                                        placeholder="SY CGPA"><br>
+
+                                    <input type="radio" id="third_year" name="year" value="Third Year">
+                                    <label for="third_year">Third Year:</label>
+                                    <input type="text" id="third_year_cgpa" name="third_year_cgpa"
+                                        placeholder="TY CGPA"><br>
+
+                                    <input type="radio" id="fourth_year" name="year" value="Fourth Year (B.Tech)">
+                                    <label for="fourth_year">Fourth Year (B.Tech):</label>
+                                    <input type="text" id="fourth_year_cgpa" name="fourth_year_cgpa"
+                                        placeholder="B.Tech CGPA"><br>
+                                </div>
+
+                                <!-- Year of Admission -->
+                                <div class="input_field">
+                                    <label for="year_admission" style="font-size: 16px;">Year of Admission:</label><br>
+                                    <input type="text" id="year_admission" name="year_admission"
+                                        placeholder="Year of Admission"><br>
+                                </div>
+
+                                <!-- Caste -->
+                                <div class="input_field">
+                                    <label for="caste" style="font-size: 16px;">Caste:</label><br>
+                                    <input type="text" id="caste" name="caste" placeholder="Caste"><br>
+                                </div>
+
+                            </div>
+
+                            <!-- gender selection -->
+                            <div class="input_field select_option">
+                                <select name="stu_gender">
+                                    <option>Select Gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+
+                                </select>
+
+                            </div>
+
+                            <!-- Year selection -->
+                            <div class="mb-3">
+
+                                <select class="form-select mb-3 year-dropdown" aria-label="Select Year" name="stu_year">
+                                    <option>Select a Year</option>
+                                    <option>First Year</option>
+                                    <option>Second Year</option>
+                                    <option>Third Year</option>
+                                    <option>Fourth Year</option>
+                                    <!-- Add more years as needed -->
+                                </select>
+                            </div>
+
+                    </div>
+
+                    <!-- department selection -->
+                    <div class="input_field select_option mb-3">
+                        <select name="stu_department">
+                            <option>Select a Department</option>
+                            <option>COMPUTER SCIENCE ENGINEERING</option>
+                            <option>ELECTRONICS & TELECOMMUNICATION ENGINEERING</option>
+                            <option>MECHANICAL ENGINEERING</option>
+                            <option>ARTIFICIAL INTELLIGENCE</option>
+                            <option>CIVIL ENGINEERING</option>
+                        </select>
+                        <div class="select_arrow"></div>
+                    </div>
+
+
+
+
+                    <input class="button" type="submit" value="Register" />
+                    </form>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer --->
+
+
+
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <small>Copyright &copy; Team Dharma Warriors </small>
+        </div>
+    </footer>
+</body>
+
+
+
+
+
+
+</body>
