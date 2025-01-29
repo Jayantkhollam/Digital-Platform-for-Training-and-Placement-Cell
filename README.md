@@ -42,18 +42,19 @@ Copy
 Edit
 git clone https://github.com/your-repo-url.git
 cd Digital-Platform-for-Training-and-Placement-Cell
-2️⃣ Install dependencies
 
+2️⃣ Install dependencies
 bash
 Copy
 Edit
 pip install -r requirements.txt
-3️⃣ Run the Flask server
 
+3️⃣ Run the Flask server
 bash
 Copy
 Edit
 python app.py
+
 4️⃣ Access the platform
 Open http://localhost:5000 in your browser
 
